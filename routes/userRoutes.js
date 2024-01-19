@@ -9,4 +9,9 @@ userRouter.post("/signin",(req,res)=>{
     res.send("signin");
 })
 
+userRouter.get("/get/:userId",(req,res)=>{
+    let id = req.params.userId
+    res.send({userId : id});
+})
+
 module.exports = userRouter;
